@@ -1,5 +1,5 @@
 from turtle import Turtle
-FONT = ("Courier", 10, "normal")
+FONT = ("Courier", 12, "normal")
 
 
 class Scoreboard(Turtle):
@@ -21,3 +21,6 @@ class Scoreboard(Turtle):
         self.score += 1
         self.update_scoreboard()
 
+    def game_over(self):
+        self.home()
+        self.write("GAME OVER", move=False, align="center", font=FONT)
